@@ -1,0 +1,56 @@
+@font-face{
+    font-family: sans-serif;
+    src: url("assets/fonts/creepy.wolf") format("woff")
+}
+
+@font-face{
+    font-family: sans-serif;
+    src: url("assets/fonts/creepy.wolf") format("woff")
+}
+* {
+    box-sizing: border-box;
+}
+html {
+
+    min-height: 100vh;
+}
+body{
+    margin: 0;
+    background-color:#0d4715;
+}
+
+.page-title{
+    color:blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+}
+
+.game-info-container{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blueviolet;
+    font-size : 4em;
+
+}
+
+.game-container{
+display: grid;
+grid-template-columns: repeat(4, auto);
+grid-gap: 12px;
+justify-content: center;
+margin: 50px;
+}
+
+.card {
+
+    background-color: black;
+    height:125px;
+    width: 120px;
+}
