@@ -66,6 +66,7 @@ overflow: hidden;
 backface-visibility: hidden;
 border-width: 2px;
 border-style: solid;
+transition: transform 500ms ease-in-out
 
 }
  
@@ -89,7 +90,7 @@ width: 100%;
 position: absolute;
 }
 
-.card.visible .card-back {
+.card.visable .card-back {
   transform: rotateY(-180deg); 
 }
 
