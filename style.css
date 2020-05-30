@@ -90,11 +90,11 @@ width: 100%;
 position: absolute;
 }
 
-.card.visable .card-back {
+.card:hover .card-back {
   transform: rotateY(-180deg); 
 }
 
-.card.visible .card-front {
+.card:hover .card-front {
   transform: rotateY(0); 
   height: 100%;
 width: 100%;
