@@ -50,7 +50,7 @@ margin: 50px;
 
 .card {
     position: relative;
-    background-color: black;
+    background-color: rgb(243, 105, 41);
     height:125px;
     width: 120px;
 }
@@ -63,12 +63,18 @@ display: flex;
 justify-content: center;
 align-items: center;
 overflow: hidden;
+backface-visibility: hidden;
+}
+ 
+.card-front{
+transform: rotateX(180deg);
+
 }
 
-.card-image{
+.tree-image{
 height: 100%;
 width: 100%;
 position: absolute;
-
-
+border-width: 2px;
+border-style: solid;
 }
