@@ -46,6 +46,7 @@ grid-template-columns: repeat(4, auto);
 grid-gap: 12px;
 justify-content: center;
 margin: 50px;
+perspective: 500px;
 }
 
 .card {
@@ -70,7 +71,9 @@ border-style: solid;
  
 .card-front{
 transform: rotateX(180deg);
-  border-color: #333;
+border-color: rgb(92, 18, 230);
+}
+
 }
 .card-back{
     border-width: 2px;
@@ -92,4 +95,7 @@ position: absolute;
 
 .card.visible .card-front {
   transform: rotateY(0); 
+  height: 100%;
+width: 100%;
+position: absolute;
 }
