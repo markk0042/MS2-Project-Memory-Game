@@ -62,5 +62,13 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+overflow: hidden;
 }
 
+.card-image{
+height: 100%;
+width: 100%;
+position: absolute;
+
+
+}
