@@ -90,13 +90,33 @@ width: 100%;
 position: absolute;
 }
 
-.card:hover .card-back {
+.card.visible .card-back {
   transform: rotateY(-180deg); 
 }
 
-.card:hover .card-front {
+.card.visible .card-front {
   transform: rotateY(0); 
-  height: 100%;
+}
+
+.card-value{
+height: 100%;
 width: 100%;
 position: absolute;
+}
+
+.card:hover .card-value{
+animation: dance 0.7s linear infinite 250ms;
+
+}
+
+@keyframes dance {
+ 0%, 100% {
+     transform: rotate(0);
+    }
+    25% {
+    transform:rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
 }
