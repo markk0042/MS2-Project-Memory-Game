@@ -121,9 +121,15 @@ animation: dance 0.7s linear infinite 250ms;
     color: purple;
     font-family: 'Satisfy', cursive;
 }
+.overlay-text-small{
+font-size: .3em;
+
+}
+
 .overlay-text.visible {
 
     display: flex;
+    flex-direction: column;
     animation: overlay-grow 500ms forwards;
 }
 @keyframes overlay-grow {
@@ -137,6 +143,8 @@ animation: dance 0.7s linear infinite 250ms;
     }
 }
 
+
+
 @keyframes dance {
  0%, 100% {
      transform: rotate(0);
@@ -146,5 +154,15 @@ animation: dance 0.7s linear infinite 250ms;
     }
     75% {
         transform: rotate(30deg);
+    }
+}
+
+@media (max-width: 600px){
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
