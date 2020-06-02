@@ -75,7 +75,6 @@ transform: rotateX(180deg);
 border-color: rgb(92, 18, 230);
 }
 
-}
 .card-back{
     border-width: 2px;
     border-style: solid;
@@ -106,8 +105,8 @@ position: absolute;
 
 .card.matched .card-value{
 animation: dance 0.7s linear infinite 250ms;
-
 }
+
 .overlay-text{
     display: none;
     position: fixed;
