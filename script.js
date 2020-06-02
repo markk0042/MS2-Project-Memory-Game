@@ -1,4 +1,9 @@
+class Audiocontroller {
+    constructor(){
+        this.backroundmusic = new Audio('assets/audio/animals001.mp3');
+    }
 
+}
 
 function ready(){
 let overlays = Array.from(document.getElementsByClassName('overlay-text'));
@@ -21,3 +26,5 @@ document.addEventListener('DOMContentLoaded', ready());
 } else {
     ready();
 }
+
+let audiocontroller = new Audiocontroller();
