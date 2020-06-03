@@ -43,5 +43,21 @@ function createCard(cardNum, posX, posY) {
 
 function clickCard(e) {
   var card = e.target;
-  card.src = "assets/img/card"+ card.num + ".png";
+  card.src = "assets/img/card" + card.num + ".png";
+
+  if (firstcard == null) {
+    firstcard = card;
+  } else if (secondcard == null) {
+    secondcard = card;
+
+    if (firstcard.num == secondcard.num) {
+      gamediv.removeChild(firstcard);
+      gamediv.removeChild(secondcard);
+    } else {
+      firstcard.src = "assets/img/cardback.png";
+      secondcard.src = "assets/img/cardback.png";
+    }
+    firstcard = null;
+    secondcard = null;
+  }
 }
