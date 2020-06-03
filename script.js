@@ -17,16 +17,16 @@ function createGrid(h,v) {
         a.push(i);
     }
 
-    var s = [];//used s for this var stands for shuffle as Im creating a shuffled array for the game.
-    while (a.length > 0) {
-        var r = Math.floor(Math.random()*a.length);//var r stands for random.
+    var s = [];
+    while(a.length > 0) {
+        var r = Math.floor(Math.random()*a.length);
         s.push(a[r]);
-        a.splice(r,0);
+        a.splice(r,1);
     }
 
-for(var x=0; x<h; x++){
-    for(var y=0; y<v; y++) {
-        createCard(a.pop(),x, y);//pop function will pop off last value in the loop of the array.
+for(var x=0;x<h;x++){
+    for(var y=0;y<v;y++) {
+        createCard(a.pop(),x,y);
         }
     }
 }
@@ -47,9 +47,9 @@ function createCard(cardNum, posX, posY){
 //posX + posY will be used above in the create card element above the function,
 //this will be called and the position values will be given so we can place the cards,
 //where we want to easier.//
-function clickCard(e){//used e for event.
-    var card = e.target; 
-    card.src = "assets/img/card"+card.num+".png"; //adding card.num because card.nums value created is in the create card function and the  
+function clickCard(e) {
+	var card = e.target;
+	card.src = "matchcards/card"+card.num+".png"; //adding card.num because card.nums value created is in the create card function and the  
     //value of create card is a.pop() resulting in the array being pullled.
     
 }
