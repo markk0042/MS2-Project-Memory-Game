@@ -10,11 +10,23 @@ var gameHeight = 4;
 createGrid(gameWidth,gameHeight);
 
 function createGrid(h,v) {
-    var a = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7];//created array for the cards.
+    //var a = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7];//created array for the cards, but this is not needed now because we created a cleaner code for it below.
+    var a = [];
+    for(var i=0; i<gameWidth*gameHeight/2; i++) {
+        a.push(i);
+        a.push(i);
+    }
+
+    var s = [];//used s for this var stands for shuffle as Im creating a shuffled array for the game.
+    while (a.length > 0) {
+        var r = Math.floor(Math.random()*a.length);//var r stands for random.
+        s.push(a[r]);
+        a.splice(r,0);
+    }
 
 for(var x=0; x<h; x++){
     for(var y=0; y<v; y++) {
-        createCard(a.pop(),x, y);//pop function will pop off last value in the loop.
+        createCard(a.pop(),x, y);//pop function will pop off last value in the loop of the array.
         }
     }
 }
