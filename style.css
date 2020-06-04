@@ -1,13 +1,22 @@
+#wrapper{
+    height: 470px;
+    width: 470px;
+    background-color: blueviolet;
+    margin: auto;
+}
+
 #Matchinggame{
 border: 1px solid black;
 width: 450px;
 height: 450px;
 position: relative;
 background-color: #3ce21b;
+margin: auto;
 }
 .header{
 text-align: center;
 font-size: 35px;
+font-weight: 30px;
 color: blueviolet;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

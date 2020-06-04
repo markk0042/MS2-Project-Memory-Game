@@ -7,6 +7,7 @@ var gameHeight = 4;
 var firstcard = null;
 var secondcard = null;
 var checktimeout = null;
+matches = 0;
 
 
 createGrid(gameWidth, gameHeight);
@@ -83,4 +84,7 @@ function checkCards() {
     firstcard = null;
     secondcard = null;
     checktimeout = null;
+}
+function gameWon(){
+    alert("Winner!");
 }
