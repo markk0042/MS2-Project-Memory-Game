@@ -43,13 +43,17 @@ function createCard(cardNum, posX, posY) {
 
 function clickCard(e) {
   var card = e.target;
-  card.src = "assets/img/card" + card.num + ".png";
 
   if (firstcard == null) {
+      card.src = "assets/img/card" + card.num + ".png";
     firstcard = card;
   } else if (secondcard == null) {
+      card.src = "assets/img/card" + card.num + ".png";
     secondcard = card;
-
+    setTimeout(checkCards, 900);
+  }
+}
+function checkCards() {
     if (firstcard.num == secondcard.num) {
       gamediv.removeChild(firstcard);
       gamediv.removeChild(secondcard);
@@ -59,5 +63,4 @@ function clickCard(e) {
     }
     firstcard = null;
     secondcard = null;
-  }
 }
