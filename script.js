@@ -6,6 +6,7 @@ var gameWidth = 4;
 var gameHeight = 4;
 var firstcard = null;
 var secondcard = null;
+var checktimeout = null;
 
 createGrid(gameWidth, gameHeight);
 
@@ -42,25 +43,42 @@ function createCard(cardNum, posX, posY) {
 }
 
 function clickCard(e) {
+    if (checktimeout != null){
+        clearTimeout(checktimeout);
+        checktimeout= null;
+        checkCards();
+    }
+
   var card = e.target;
 
   if (firstcard == null) {
       card.src = "assets/img/card" + card.num + ".png";
     firstcard = card;
+
+  } else if (firstcard == card){
+      firstcard.src = "assets/img/cardback.png";
+      firstcard = null;
+
   } else if (secondcard == null) {
       card.src = "assets/img/card" + card.num + ".png";
     secondcard = card;
-    setTimeout(checkCards, 900);
+    checktimeout = setTimeout(checkCards, 1000);
   }
 }
 function checkCards() {
     if (firstcard.num == secondcard.num) {
       gamediv.removeChild(firstcard);
       gamediv.removeChild(secondcard);
-    } else {
+      matches++;
+        if (matches >= gameWidth*gameHeight/2) {
+            gameWon();
+        }
+
+     }else{
       firstcard.src = "assets/img/cardback.png";
       secondcard.src = "assets/img/cardback.png";
     }
     firstcard = null;
     secondcard = null;
+    checktimeout = null;
 }

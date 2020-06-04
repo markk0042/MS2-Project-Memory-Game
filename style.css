@@ -5,3 +5,9 @@ height: 450px;
 position: relative;
 background-color: #3ce21b;
 }
+.header{
+text-align: center;
+font-size: 25px;
+color: blueviolet;
+margin-bottom: 0px;
+}
