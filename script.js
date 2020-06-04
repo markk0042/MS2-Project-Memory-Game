@@ -8,6 +8,7 @@ var firstcard = null;
 var secondcard = null;
 var checktimeout = null;
 
+
 createGrid(gameWidth, gameHeight);
 
 function createGrid(h, v) {
@@ -35,6 +36,7 @@ function createCard(cardNum, posX, posY) {
   var card = document.createElement("img");
   card.num = cardNum;
   card.src = "assets/img/cardback.png";
+  card.style.cssText = "-webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; -webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-drag: none;";
   card.style.position = "absolute";
   card.style.left = posX * (cardsize + cardspacing) + cardspacing + "px";
   card.style.top = posY * (cardsize + cardspacing) + cardspacing + "px";

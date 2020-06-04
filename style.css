@@ -7,7 +7,12 @@ background-color: #3ce21b;
 }
 .header{
 text-align: center;
-font-size: 25px;
+font-size: 35px;
 color: blueviolet;
-margin-bottom: 0px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-image: url("assets/img/tree.png");
+    background-color: peru;
 }
