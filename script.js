@@ -1,7 +1,7 @@
 var gamediv = document.getElementById("Matchinggame");
 
-var cardsize = 100;
-var cardspacing = 10;
+var cardsize = 90;
+var cardspacing = 7;
 var gameWidth = 4;
 var gameHeight = 4;
 var firstcard = null;
