@@ -1,15 +1,13 @@
-#wrapper{
+.wrapper{
     height: 470px;
     width: 470px;
     margin: auto;
 }
 
 #Matchinggame{
-border: 1px solid black;
 width: 450px;
 height: 450px;
 position: relative;
-background-color: #fff;
 margin: auto;
 }
 .header{
@@ -23,12 +21,24 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 body{
     background-image: url("assets/img/tree.png");
     background-color: peru;
+    background-attachment: fixed;
 }
-.container{
+.jumbotron{
     text-align: center;
-    background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    background-color: peru;
+    opacity: 0.9;
     text-shadow: black 0.1em 0.1em 0.1em;
+    margin: 25px 0;
+    size: 100%;
+    line-height: 1;
+}
 
+@media only screen and (max-width: 600px) {
+  #Matchinggame{
+     position: left;
+     width: 375px;
+     margin-left: 0px;
+     padding:0px;
+  }
 }
